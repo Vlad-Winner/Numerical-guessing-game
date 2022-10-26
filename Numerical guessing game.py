@@ -43,7 +43,13 @@ while game:
             break
         print()
     print()
-    if not input('Сиграем еще? Ответьте да или нет: ').lower() == 'да':
+    answer = input('Сиграем еще? Ответьте да или нет: ')
+    while not answer.lower() in ['да', 'нет']:
+        print()
+        answer = input('Я вас не понимаю, введите "да" или "нет": ')
+        if answer.lower() in ['да', 'нет']:
+            break
+    if answer.lower() == 'нет':
         break
 print()
 print('Спасибо, что играли в числовую угадайку. Еще увидимся...')
