@@ -1,4 +1,3 @@
-from ast import Break
 import random
 print('Добро пожаловать в числовую угадайку')
 
