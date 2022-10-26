@@ -42,7 +42,7 @@ while game:
             break
         print()
     print()
-    answer = input('Сиграем еще? Ответьте да или нет: ')
+    answer = input('Сыграем еще? Ответьте да или нет: ')
     while not answer.lower() in ['да', 'нет']:
         print()
         answer = input('Я вас не понимаю, введите "да" или "нет": ')
