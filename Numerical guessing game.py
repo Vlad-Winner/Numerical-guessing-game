@@ -10,13 +10,21 @@ def is_valid(text):
 
 game = True
 while game:
+    print()
     counter = 0
-    n = random.randint(1, 100)
+    print('Если хотите задать до какого числа будем играть,')
+    max_digit = input('введите его, иначе будет от 1 до 100: ')
+    if max_digit.isdigit():
+        n = random.randint(1, int(max_digit))
+    else:
+        max_digit = 100
+        n = random.randint(1, max_digit)
+    print()
 
     while True:
-        x = input('Введите целое число от 1 до 100 включительно: ')
+        x = input(f'Введите целое число от 1 до {max_digit} включительно: ')
         if not is_valid(x):
-            print('А может быть все-таки введем целое число от 1 до 100?')
+            print(f'А может быть все-таки введем целое число от 1 до {max_digit}?')
             print()
             continue
         x = int(x)
