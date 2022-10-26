@@ -1,8 +1,8 @@
 import random
 print('Добро пожаловать в числовую угадайку')
 
-def is_valid(text):
-    if text.isdigit() and 1 <= int(text) <= 100:
+def is_valid(text, num):
+    if text.isdigit() and 1 <= int(text) <= num:
         return True
     else:
         return False
@@ -22,7 +22,7 @@ while game:
 
     while True:
         x = input(f'Введите целое число от 1 до {max_digit} включительно: ')
-        if not is_valid(x):
+        if not is_valid(x, int(max_digit)):
             print(f'А может быть все-таки введем целое число от 1 до {max_digit}?')
             print()
             continue
